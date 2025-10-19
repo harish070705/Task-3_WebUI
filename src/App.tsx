@@ -10,6 +10,7 @@ import {
   ConfigProvider,
   theme,
 } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
 import * as api from './services/api';
 import { Task, NewTask, TaskExecution } from './types';
 import TaskList from './components/TaskList';
