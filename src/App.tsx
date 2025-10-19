@@ -5,13 +5,11 @@ import {
   Typography,
   Input,
   Button,
-  Space,
   message,
   notification,
   ConfigProvider,
   theme,
 } from 'antd';
-import { PlusOutlined, ThunderboltFilled } from '@ant-design/icons';
 import * as api from './services/api';
 import { Task, NewTask, TaskExecution } from './types';
 import TaskList from './components/TaskList';
@@ -19,7 +17,7 @@ import TaskForm from './components/TaskForm';
 import RunResultModal from './components/RunResultModal';
 import './App.css';
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content} = Layout;
 const { Title } = Typography;
 const { Search } = Input;
 
