@@ -15,30 +15,38 @@ The UI is built using React 19, TypeScript, and the Ant Design component library
 - Notifications: Uses toast notifications to clearly communicate the success or failure of API operations.
 
 # Screenshots
+
 Here are some of the key views of the application:
 
 # Main Dashboard
-The main view showing the list of all created tasks, their status, and their execution history.
-![Main_page](main.png)
 
-# Create  Task Execution
+The main view showing the list of all created tasks, their status, and their execution history.
+![Main_page](.\images\main.png)
+
+# Create Task Execution
+
 This shows how to create a task in UI
-![Task_page](task.png)
+![Task_page](.\images\task.png)
 
 # Viewing Command Output
+
 After a task runs, the modal displays the complete execution results, including start/end times and the full console output.
-![Output](op.png)
+![Output](.\images\op.png)
 
 # Expanded Execution History
+
 Users can expand any task row to see a detailed table of all its previous runs.
-![Expand_page](expand.png)
+![Expand_page](.\images\expand.png)
 
 # Architecture: Frontend & Backend Connection
+
 This is a two-part application.
+
 1.  Backend (The "Engine"): A Spring Boot application (my `TASK-1`) that serves a REST API. It handles all business logic, command execution (local or Kubernetes), and communication with the MongoDB database.
 2.  Frontend (This task): A React Single Page Application (SPA) that acts as the "control panel." It has no direct access to the database or the shell. It only communicates with the backend's REST API.
 
 # How it Connects
+
 The connection is managed through asynchronous HTTP requests.
 
 - API Service: The `src/services/api.ts` file in this project uses the `axios` library to make all API calls to the backend.
@@ -46,6 +54,7 @@ The connection is managed through asynchronous HTTP requests.
 - Development Proxy: To avoid CORS (Cross-Origin Resource Sharing) errors during development, the `package.json` file contains a `"proxy": "http://localhost:9090"` setting. This tells the React development server (on port 3000) to forward all API requests to your Spring Boot backend (on port 9090).
 
 # How Results are Produced (The "Run Task" Flow)
+
 This is a perfect example of the full-stack connection:
 
 1.  UI: A user clicks the "Run" button on a task.
@@ -60,11 +69,13 @@ This is a perfect example of the full-stack connection:
 10. UI: React receives the JSON. It shows a "Task... Triggered" notification, opens the Execution Result modal, and displays the command output from the received JSON.
 
 ## Prerequisites
+
 - [Node.js](https://nodejs.org/) (v18.x or newer recommended)
 - `npm` (comes with Node.js)
 - A running instance of the [Task Runner Backend](https://www.google.com/search?q=https://github.com/your-username/TASK-1) on `http://localhost:9090`.
 
 # Installation & Running
+
 1.  Clone this repository:
 
     ```bash
@@ -93,6 +104,7 @@ The application will automatically open in your default browser at `http://local
 Note: The backend _must_ be running on port 9090 for the API calls to work. If your backend runs on a different port, update the `"proxy"` value in `package.json`.
 
 # Project Structure
+
 ```
 /src
 ├── components/        # Reusable React components
@@ -112,6 +124,7 @@ Note: The backend _must_ be running on port 9090 for the API calls to work. If y
 ```
 
 # Built With
+
 - React 19
 - TypeScript
 - Ant Design - UI Component Library
