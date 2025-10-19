@@ -21,22 +21,22 @@ Here are some of the key views of the application:
 # Main Dashboard
 
 The main view showing the list of all created tasks, their status, and their execution history.
-![Main_page](.\images\main.png)
+![Main_page](./images/main.png)
 
 # Create Task Execution
 
 This shows how to create a task in UI
-![Task_page](.\images\task.png)
+![Task_page](./images/task.png)
 
 # Viewing Command Output
 
 After a task runs, the modal displays the complete execution results, including start/end times and the full console output.
-![Output](.\images\op.png)
+![Output](./images/op.png)
 
 # Expanded Execution History
 
 Users can expand any task row to see a detailed table of all its previous runs.
-![Expand_page](.\images\expand.png)
+![Expand_page](./images/expand.png)
 
 # Architecture: Frontend & Backend Connection
 
