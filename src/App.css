@@ -1,0 +1,36 @@
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 0 630px;
+}
+
+.app-content {
+  padding: 28px;
+}
+
+.content-container {
+  background: #141414; 
+  padding: 28px;
+  border-radius: 8px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Style for pre-formatted text in expanded table rows */
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
